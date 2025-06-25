@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1A1A1A; /* Deep charcoal base */
+  --color-secondary: #2D2D2D; /* Elevated surface color */
+  --color-accent: #E65400; /* High-energy orange */
+  
+  /* Background Colors */
+  --color-background: #0F0F0F; /* True dark background */
+  --color-surface: #242424; /* Card and component background */
+  
+  /* Text Colors */
+  --color-text-primary: #FFFFFF; /* Pure white */
+  --color-text-secondary: #B0B0B0; /* Muted gray */
+  
+  /* Status Colors */
+  --color-success: #4CAF50; /* Confirmation green */
+  --color-warning: #FF9800; /* Amber warning */
+  --color-error: #F44336; /* Clear red error */
+  
+  /* Border Colors */
+  --color-border: rgba(255, 255, 255, 0.1); /* Minimal borders */
+  
+  /* Shadow Values */
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-button: 0 2px 8px rgba(0, 0, 0, 0.3);
+  
+  /* Animation */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-medium transition-all duration-150 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50;
+    box-shadow: var(--shadow-button);
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-text-primary px-6 py-3 rounded-lg font-medium transition-all duration-150 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50;
+    box-shadow: var(--shadow-button);
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg p-6 transition-all duration-200;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(36, 36, 36, 0.8);
+  }
+  
+  .input-field {
+    @apply bg-surface border border-border text-text-primary px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-150;
+  }
+  
+  .table-cell {
+    @apply border-b border-border px-4 py-3 text-sm;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-accent), #FF7043);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(230, 84, 0, 0.3);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .skeleton {
+    background: linear-gradient(90deg, var(--color-surface) 25%, var(--color-secondary) 50%, var(--color-surface) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+}

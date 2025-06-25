@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSK Crossfight Gym - Home</title>
+    <link rel="stylesheet" href="../css/main.css" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbskcrossf8512back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-primary/95 backdrop-blur-md border-b border-border">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <svg class="w-10 h-10 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                    <path d="M8 11h8v2H8z"/>
+                    <path d="M10 7h4v2h-4z"/>
+                    <path d="M10 15h4v2h-4z"/>
+                </svg>
+                <span class="text-xl font-rajdhani font-bold text-gradient">BSK CROSSFIGHT</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="home_page.html" class="text-accent font-medium hover:text-orange-400 transition-colors">Home</a>
+                <a href="schedule_management.html" class="text-text-secondary hover:text-text-primary transition-colors">Schedule</a>
+                <a href="live_camera_feed.html" class="text-text-secondary hover:text-text-primary transition-colors">Live Cam</a>
+                <a href="pricing_information.html" class="text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
+                <a href="contact_location.html" class="text-text-secondary hover:text-text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- Contact Button & Mobile Menu -->
+            <div class="flex items-center space-x-4">
+                <a href="contact_location.html" class="hidden sm:block btn-primary">Contact Us</a>
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary border-t border-border">
+            <div class="px-4 py-2 space-y-2">
+                <a href="home_page.html" class="block py-2 text-accent font-medium">Home</a>
+                <a href="schedule_management.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Schedule</a>
+                <a href="live_camera_feed.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Live Cam</a>
+                <a href="pricing_information.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
+                <a href="contact_location.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Intense gym training" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-rajdhani font-bold mb-6 animate-fade-in">
+                UNLEASH YOUR
+                <span class="text-gradient block">INNER WARRIOR</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto animate-fade-in">
+                Transform your body and mind with high-intensity training that pushes your limits
+            </p>
+            <a href="schedule_management.html" class="btn-primary text-lg px-8 py-4 shadow-glow animate-fade-in">
+                View Class Schedule
+            </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Weekly Schedule Preview -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-4">TODAY'S CLASSES</h2>
+                <p class="text-text-secondary text-lg">Get ready to dominate your workout</p>
+            </div>
+
+            <!-- Schedule Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Class Card 1 -->
+                <div class="card border-l-4 border-accent hover:shadow-glow transition-all duration-200">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-rajdhani font-bold text-accent">CROSSFIT INTENSITY</h3>
+                            <p class="text-text-secondary">Coach Marcus</p>
+                        </div>
+                        <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">6:00 AM</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-text-secondary">Room A</span>
+                        <span class="bg-success/20 text-success px-2 py-1 rounded text-xs">Available</span>
+                    </div>
+                </div>
+
+                <!-- Class Card 2 -->
+                <div class="card border-l-4 border-accent hover:shadow-glow transition-all duration-200">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-rajdhani font-bold text-accent">FIGHT CONDITIONING</h3>
+                            <p class="text-text-secondary">Coach Sarah</p>
+                        </div>
+                        <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">7:30 AM</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-text-secondary">Room B</span>
+                        <span class="bg-warning/20 text-warning px-2 py-1 rounded text-xs">2 Spots Left</span>
+                    </div>
+                </div>
+
+                <!-- Class Card 3 -->
+                <div class="card border-l-4 border-accent hover:shadow-glow transition-all duration-200">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-rajdhani font-bold text-accent">STRENGTH & POWER</h3>
+                            <p class="text-text-secondary">Coach Alex</p>
+                        </div>
+                        <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">6:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-text-secondary">Room A</span>
+                        <span class="bg-success/20 text-success px-2 py-1 rounded text-xs">Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="schedule_management.html" class="btn-secondary">View Full Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Gym Activity -->
+    <section class="py-16 px-4 bg-surface">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-4">LIVE GYM ACTIVITY</h2>
+                <p class="text-text-secondary text-lg">See the intensity in real-time</p>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden shadow-card">
+                <!-- Live Camera Feed Placeholder -->
+                <div class="aspect-video bg-primary flex items-center justify-center relative">
+                    <img src="https://images.pixabay.com/photos/2017/08/07/14/02/people-2604149_1280.jpg" alt="Live gym activity" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    
+                    <!-- Live Indicator -->
+                    <div class="absolute top-4 left-4 flex items-center space-x-2 bg-error/90 px-3 py-1 rounded-full">
+                        <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        <span class="text-white text-sm font-medium">LIVE</span>
+                    </div>
+
+                    <!-- Watch Live Button -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-200">
+                        <a href="live_camera_feed.html" class="btn-primary text-lg px-8 py-4">
+                            <svg class="w-6 h-6 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            Watch Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Highlights -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-4">MEMBERSHIP OPTIONS</h2>
+                <p class="text-text-secondary text-lg">Choose your path to greatness</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Drop-in Pass -->
+                <div class="card text-center hover:shadow-glow transition-all duration-200">
+                    <h3 class="text-2xl font-rajdhani font-bold mb-4">DROP-IN</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-accent">$25</span>
+                        <span class="text-text-secondary">/class</span>
+                    </div>
+                    <ul class="space-y-2 mb-6 text-text-secondary">
+                        <li>Single class access</li>
+                        <li>All equipment included</li>
+                        <li>No commitment</li>
+                    </ul>
+                    <a href="pricing_information.html" class="btn-secondary w-full">Get Started</a>
+                </div>
+
+                <!-- Monthly Membership -->
+                <div class="card text-center border-2 border-accent hover:shadow-glow transition-all duration-200 relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-medium">
+                        POPULAR
+                    </div>
+                    <h3 class="text-2xl font-rajdhani font-bold mb-4">MONTHLY</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-accent">$149</span>
+                        <span class="text-text-secondary">/month</span>
+                    </div>
+                    <ul class="space-y-2 mb-6 text-text-secondary">
+                        <li>Unlimited classes</li>
+                        <li>All equipment included</li>
+                        <li>Nutrition guidance</li>
+                        <li>Progress tracking</li>
+                    </ul>
+                    <a href="pricing_information.html" class="btn-primary w-full">Join Now</a>
+                </div>
+
+                <!-- Annual Membership -->
+                <div class="card text-center hover:shadow-glow transition-all duration-200">
+                    <h3 class="text-2xl font-rajdhani font-bold mb-4">ANNUAL</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-accent">$1,299</span>
+                        <span class="text-text-secondary">/year</span>
+                        <div class="text-success text-sm mt-1">Save $489</div>
+                    </div>
+                    <ul class="space-y-2 mb-6 text-text-secondary">
+                        <li>Everything in Monthly</li>
+                        <li>Personal training sessions</li>
+                        <li>Priority booking</li>
+                        <li>Guest passes</li>
+                    </ul>
+                    <a href="pricing_information.html" class="btn-secondary w-full">Save Big</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gym Introduction -->
+    <section class="py-16 px-4 bg-surface">
+        <div class="container mx-auto max-w-4xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-6">FORGE YOUR STRENGTH</h2>
+                    <p class="text-text-secondary text-lg mb-6">
+                        At BSK Crossfight, we don't just build bodies – we forge warriors. Our high-intensity training programs combine the best of CrossFit, martial arts conditioning, and strength training to push you beyond your limits.
+                    </p>
+                    <p class="text-text-secondary text-lg mb-8">
+                        Join a community of dedicated athletes who refuse to settle for ordinary. Every workout is a battle, every rep is a victory, and every day is a chance to become unstoppable.
+                    </p>
+                    <a href="contact_location.html" class="btn-primary">Start Your Journey</a>
+                </div>
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Intense training session" class="w-full h-96 object-cover rounded-lg shadow-card" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary py-12 px-4 border-t border-border">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo & Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                            <path d="M8 11h8v2H8z"/>
+                            <path d="M10 7h4v2h-4z"/>
+                            <path d="M10 15h4v2h-4z"/>
+                        </svg>
+                        <span class="text-lg font-rajdhani font-bold text-gradient">BSK CROSSFIGHT</span>
+                    </div>
+                    <p class="text-text-secondary mb-4">
+                        Unleash your inner warrior with high-intensity training that transforms both body and mind.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-text-secondary hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-text-secondary hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-text-secondary hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-rajdhani font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="schedule_management.html" class="text-text-secondary hover:text-accent transition-colors">Class Schedule</a></li>
+                        <li><a href="pricing_information.html" class="text-text-secondary hover:text-accent transition-colors">Membership</a></li>
+                        <li><a href="live_camera_feed.html" class="text-text-secondary hover:text-accent transition-colors">Live Feed</a></li>
+                        <li><a href="contact_location.html" class="text-text-secondary hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-rajdhani font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-text-secondary">
+                        <li>123 Warrior Street</li>
+                        <li>Fight City, FC 12345</li>
+                        <li>(555) 123-FIGHT</li>
+                        <li>info@bskcrossfight.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border mt-8 pt-8 text-center text-text-secondary">
+                <p>&copy; 2025 BSK Crossfight Gym. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

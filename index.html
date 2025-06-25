@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Fitness Gym - Industrial Athletic Experience</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
+            font-family: 'Inter', sans-serif;
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+        
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .logo {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #E65400;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(230, 84, 0, 0.3);
+        }
+        
+        .loading-bar {
+            width: 300px;
+            height: 4px;
+            background: #242424;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .loading-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #E65400, #FF7043);
+            border-radius: 2px;
+            animation: loading 2s ease-in-out;
+            box-shadow: 0 0 10px rgba(230, 84, 0, 0.5);
+        }
+        
+        .loading-text {
+            font-size: 1rem;
+            color: #B0B0B0;
+            font-weight: 500;
+        }
+        
+        @keyframes loading {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+        
+        .fade-out {
+            animation: fadeOut 0.5s ease-in-out forwards;
+        }
+        
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbskcrossf8512back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body>
+    <div class="loader-container" id="loader">
+        <div class="logo">ELITE FITNESS</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+        <div class="loading-text">Preparing your fitness journey...</div>
+    </div>
+
+    <script>
+        // Simulate loading and redirect to home page
+        setTimeout(() => {
+            const loader = document.getElementById('loader');
+            loader.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location.href = 'pages/home_page.html';
+            }, 500);
+        }, 2000);
+        
+        // Preload fonts
+        const fonts = [
+            'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap',
+            'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap',
+            'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap',
+            'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap'
+        ];
+        
+        fonts.forEach(font => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = font;
+            document.head.appendChild(link);
+        });
+    </script>
+</body>
+</html>
