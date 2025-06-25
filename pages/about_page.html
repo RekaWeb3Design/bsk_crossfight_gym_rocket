@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - BSK Crossfight Gym</title>
+    <link rel="stylesheet" href="../css/main.css" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbskcrossf8512back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-primary/95 backdrop-blur-md border-b border-border">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <svg class="w-10 h-10 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                    <path d="M8 11h8v2H8z"/>
+                    <path d="M10 7h4v2h-4z"/>
+                    <path d="M10 15h4v2h-4z"/>
+                </svg>
+                <span class="text-xl font-rajdhani font-bold text-gradient">BSK CROSSFIGHT</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="home_page.html" class="text-text-secondary hover:text-text-primary transition-colors">Home</a>
+                <a href="team_page.html" class="text-text-secondary hover:text-text-primary transition-colors">Team</a>
+                <a href="about_page.html" class="text-accent font-medium hover:text-orange-400 transition-colors">About</a>
+                <a href="schedule_management.html" class="text-text-secondary hover:text-text-primary transition-colors">Schedule</a>
+                <a href="live_camera_feed.html" class="text-text-secondary hover:text-text-primary transition-colors">Live Cam</a>
+                <a href="pricing_information.html" class="text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
+                <a href="contact_location.html" class="text-text-secondary hover:text-text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- Contact Button & Mobile Menu -->
+            <div class="flex items-center space-x-4">
+                <a href="contact_location.html" class="hidden sm:block btn-primary">Contact Us</a>
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary border-t border-border">
+            <div class="px-4 py-2 space-y-2">
+                <a href="home_page.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Home</a>
+                <a href="team_page.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Team</a>
+                <a href="about_page.html" class="block py-2 text-accent font-medium">About</a>
+                <a href="schedule_management.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Schedule</a>
+                <a href="live_camera_feed.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Live Cam</a>
+                <a href="pricing_information.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
+                <a href="contact_location.html" class="block py-2 text-text-secondary hover:text-text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="BSK Crossfight gym interior" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+            <div class="absolute inset-0 bg-black/70"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-rajdhani font-bold mb-6 animate-fade-in">
+                OUR
+                <span class="text-gradient block">STORY</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto animate-fade-in">
+                Born from passion, forged through dedication, and built to transform lives
+            </p>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Origin Story Section -->
+    <section class="py-16 px-4 bg-surface">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-6">THE BEGINNING</h2>
+                    <p class="text-text-secondary text-lg mb-6">
+                        BSK Crossfight was founded in 2018 with a simple yet powerful vision: to create more than just a gym. We wanted to build a sanctuary where ordinary people could discover their extraordinary potential through the fusion of CrossFit intensity and martial arts precision.
+                    </p>
+                    <p class="text-text-secondary text-lg mb-6">
+                        What started as a small training space with a handful of dedicated athletes has evolved into a community of warriors who refuse to accept limitations. Every drop of sweat, every rep, and every breakthrough moment has contributed to the legacy we're building together.
+                    </p>
+                    <p class="text-text-secondary text-lg">
+                        Our founders, veterans of both competitive fitness and martial arts, understood that true strength comes not just from physical conditioning, but from the mental fortitude forged in the fires of consistent challenge.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Gym founding story" class="w-full h-96 object-cover rounded-lg shadow-card" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Philosophy Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-4">OUR PHILOSOPHY</h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Three core principles guide everything we do at BSK Crossfight
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Philosophy 1 -->
+                <div class="card text-center hover:shadow-glow transition-all duration-200">
+                    <div class="bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-rajdhani font-bold mb-4 text-accent">INTENSITY</h3>
+                    <p class="text-text-secondary">
+                        We believe that growth happens outside your comfort zone. Every workout is designed to push your limits and reveal what you're truly capable of achieving.
+                    </p>
+                </div>
+
+                <!-- Philosophy 2 -->
+                <div class="card text-center hover:shadow-glow transition-all duration-200">
+                    <div class="bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-rajdhani font-bold mb-4 text-accent">COMMUNITY</h3>
+                    <p class="text-text-secondary">
+                        Strength is multiplied when shared. Our community of warriors supports, challenges, and celebrates each other through every victory and setback.
+                    </p>
+                </div>
+
+                <!-- Philosophy 3 -->
+                <div class="card text-center hover:shadow-glow transition-all duration-200">
+                    <div class="bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-rajdhani font-bold mb-4 text-accent">EXCELLENCE</h3>
+                    <p class="text-text-secondary">
+                        We don't just aim to be better than yesterday; we strive for mastery in every movement, every technique, and every aspect of our training methodology.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Highlights Section -->
+    <section class="py-16 px-4 bg-surface">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-4">WORLD-CLASS FACILITY</h2>
+                <p class="text-text-secondary text-lg">
+                    Every piece of equipment, every square foot, designed for your transformation
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Facility Feature 1 -->
+                <div class="card text-center">
+                    <div class="bg-accent/20 p-4 rounded-lg mb-4">
+                        <svg class="w-8 h-8 text-accent mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-rajdhani font-bold text-accent mb-2">5,000 SQ FT</h3>
+                    <p class="text-text-secondary text-sm">Open training space</p>
+                </div>
+
+                <!-- Facility Feature 2 -->
+                <div class="card text-center">
+                    <div class="bg-accent/20 p-4 rounded-lg mb-4">
+                        <svg class="w-8 h-8 text-accent mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-rajdhani font-bold text-accent mb-2">PREMIUM EQUIPMENT</h3>
+                    <p class="text-text-secondary text-sm">Rogue & Concept2 gear</p>
+                </div>
+
+                <!-- Facility Feature 3 -->
+                <div class="card text-center">
+                    <div class="bg-accent/20 p-4 rounded-lg mb-4">
+                        <svg class="w-8 h-8 text-accent mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-rajdhani font-bold text-accent mb-2">LIVE STREAMING</h3>
+                    <p class="text-text-secondary text-sm">HD camera system</p>
+                </div>
+
+                <!-- Facility Feature 4 -->
+                <div class="card text-center">
+                    <div class="bg-accent/20 p-4 rounded-lg mb-4">
+                        <svg class="w-8 h-8 text-accent mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-rajdhani font-bold text-accent mb-2">RECOVERY ZONE</h3>
+                    <p class="text-text-secondary text-sm">Sauna & stretching area</p>
+                </div>
+            </div>
+
+            <!-- Facility Images Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative overflow-hidden rounded-lg shadow-card">
+                    <img src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Main training area" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-200" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-black/40 flex items-end">
+                        <div class="p-4">
+                            <h4 class="text-white font-rajdhani font-bold">Main Training Floor</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-lg shadow-card">
+                    <img src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Equipment area" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-200" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-black/40 flex items-end">
+                        <div class="p-4">
+                            <h4 class="text-white font-rajdhani font-bold">Equipment Zone</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-lg shadow-card">
+                    <img src="https://images.pexels.com/photos/2294354/pexels-photo-2294354.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Recovery area" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-200" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-black/40 flex items-end">
+                        <div class="p-4">
+                            <h4 class="text-white font-rajdhani font-bold">Recovery Suite</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-4">TRANSFORMATION STORIES</h2>
+                <p class="text-text-secondary text-lg">
+                    Real people, real results, real warriors
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Success Story 1 -->
+                <div class="card hover:shadow-glow transition-all duration-200">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <img src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop&crop=face" alt="Member testimonial" class="w-16 h-16 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face'; this.onerror=null;" />
+                        <div>
+                            <h3 class="text-lg font-rajdhani font-bold text-accent">Sarah M.</h3>
+                            <p class="text-text-secondary text-sm">Member since 2019</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-text-secondary italic mb-4">
+                        "I walked into BSK Crossfight as someone who had never done anything more intense than a jog. Two years later, I'm competing in CrossFit competitions and have discovered a strength I never knew existed."
+                    </blockquote>
+                    <div class="flex space-x-4 text-sm">
+                        <span class="bg-success/20 text-success px-2 py-1 rounded">-45 lbs</span>
+                        <span class="bg-accent/20 text-accent px-2 py-1 rounded">Regional Competitor</span>
+                    </div>
+                </div>
+
+                <!-- Success Story 2 -->
+                <div class="card hover:shadow-glow transition-all duration-200">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop&crop=face" alt="Member testimonial" class="w-16 h-16 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face'; this.onerror=null;" />
+                        <div>
+                            <h3 class="text-lg font-rajdhani font-bold text-accent">Mike R.</h3>
+                            <p class="text-text-secondary text-sm">Member since 2020</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-text-secondary italic mb-4">
+                        "After my military service, I struggled to find that same sense of purpose and intensity. BSK Crossfight gave me back my warrior mindset and a brotherhood that pushes me every single day."
+                    </blockquote>
+                    <div class="flex space-x-4 text-sm">
+                        <span class="bg-success/20 text-success px-2 py-1 rounded">+25 lbs muscle</span>
+                        <span class="bg-accent/20 text-accent px-2 py-1 rounded">Coach Certification</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-16 px-4 bg-surface">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-8">OUR CORE VALUES</h2>
+            
+            <div class="space-y-8">
+                <div class="card">
+                    <h3 class="text-2xl font-rajdhani font-bold text-accent mb-4">RESPECT</h3>
+                    <p class="text-text-secondary">
+                        Every person who walks through our doors deserves respect, regardless of their fitness level, background, or goals. We build each other up, never tear each other down.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-rajdhani font-bold text-accent mb-4">GROWTH</h3>
+                    <p class="text-text-secondary">
+                        We believe that every day offers an opportunity to become better than yesterday. Progress, not perfection, is our measure of success.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-rajdhani font-bold text-accent mb-4">ACCOUNTABILITY</h3>
+                    <p class="text-text-secondary">
+                        We hold ourselves and each other accountable to our commitments, our form, and our effort. Excellence is a habit, not an accident.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-4xl md:text-5xl font-rajdhani font-bold mb-6">READY TO JOIN OUR STORY?</h2>
+            <p class="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
+                Your transformation begins with a single decision. Take the first step toward becoming the warrior you were meant to be.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact_location.html" class="btn-primary text-lg px-8 py-4 shadow-glow">Start Your Journey</a>
+                <a href="live_camera_feed.html" class="btn-secondary text-lg px-8 py-4">Experience Our Intensity</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary py-12 px-4 border-t border-border">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo & Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                            <path d="M8 11h8v2H8z"/>
+                            <path d="M10 7h4v2h-4z"/>
+                            <path d="M10 15h4v2h-4z"/>
+                        </svg>
+                        <span class="text-lg font-rajdhani font-bold text-gradient">BSK CROSSFIGHT</span>
+                    </div>
+                    <p class="text-text-secondary mb-4">
+                        Unleash your inner warrior with high-intensity training that transforms both body and mind.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-text-secondary hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-text-secondary hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-text-secondary hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-rajdhani font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="team_page.html" class="text-text-secondary hover:text-accent transition-colors">Our Team</a></li>
+                        <li><a href="schedule_management.html" class="text-text-secondary hover:text-accent transition-colors">Class Schedule</a></li>
+                        <li><a href="pricing_information.html" class="text-text-secondary hover:text-accent transition-colors">Membership</a></li>
+                        <li><a href="live_camera_feed.html" class="text-text-secondary hover:text-accent transition-colors">Live Feed</a></li>
+                        <li><a href="contact_location.html" class="text-text-secondary hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-rajdhani font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-text-secondary">
+                        <li>123 Warrior Street</li>
+                        <li>Fight City, FC 12345</li>
+                        <li>(555) 123-FIGHT</li>
+                        <li>info@bskcrossfight.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border mt-8 pt-8 text-center text-text-secondary">
+                <p>&copy; 2025 BSK Crossfight Gym. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
